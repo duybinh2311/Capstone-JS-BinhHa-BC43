@@ -1,0 +1,33 @@
+// var, extend, mixin
+@import './abstract/variables';
+@import './abstract/extend';
+@import './abstract/mixin';
+
+// reset css browser, default css
+@import './base/reset';
+@import './base/default';
+
+// components
+@import './components/button';
+@import './components/card';
+
+// layout
+
+// pages
+@import './pages/index.scss';
+@import './pages/detail.scss';
+@import './pages/register.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+
+

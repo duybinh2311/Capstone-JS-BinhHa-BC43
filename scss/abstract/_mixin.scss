@@ -1,4 +1,44 @@
-// Hà 
+@mixin btn-primary-trans {
+  padding: 10px 30px;
+  background-color: transparent;
+  color: $c-secondary;
+  border: solid $c-primary 2px;
+  font-weight: $fw-normal;
+  border-radius: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: $bg-primary;
+    background-color: $c-primary;
+  }
+}
 
+@mixin btn-primary-dark {
+  padding: 10px 30px;
+  background-color: $bg-primary;
+  color: $c-secondary;
+  border: none;
+  font-weight: $fw-normal;
+  border-radius: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: $bg-primary;
+    background-color: $c-primary;
+  }
+}
 
-// Bình
+@mixin btn-nav {
+  background-color: $c-primary;
+  width: 30px;
+  height: 30px;
+  border: solid 1px $c-primary;
+  color: $bg-primary;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $bg-primary;
+    color: $c-primary;
+  }
+}
