@@ -1,0 +1,142 @@
+.cart {
+  margin: 80px 0;
+  .container {
+    .cart__title {
+      margin-bottom: 50px;
+      h3 {
+        font-size: $fs-3;
+        color: $c-primary;
+        font-weight: $fw-normal;
+        text-transform: capitalize;
+      }
+      p {
+        color: $c-secondary;
+        font-size: $fs-6;
+        margin: 15px 0;
+      }
+    }
+    .cart__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .cart__list {
+        width: 70%;
+        .cart__list-text {
+          color: $c-secondary;
+          font-size: $fs-6;
+          font-weight: $fw-semibold;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          padding-bottom: 15px;
+          border-bottom: 2px solid rgba(51, 52, 51, 0.8);
+          .product-text {
+          }
+          .quantity-text {
+            display: flex;
+            flex-basis: 50%;
+            justify-content: space-around;
+          }
+        }
+        .cart__list-item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+          .cart__item {
+            display: flex;
+            justify-content: space-between;
+            .cart__item-content-left {
+              display: flex;
+              align-items: flex-start;
+              .cart__item-product-pic {
+                margin-right: 30px;
+                background-color: $c-secondary;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px;
+                @include clipPath-cart;
+                img {
+                  width: 70px;
+                }
+              }
+              .cart__item-product-description {
+                color: $c-secondary;
+                font-size: $fs-6;
+                line-height: 2;
+              }
+            }
+            .cart__item-content-right {
+              display: flex;
+              flex-basis: 50%;
+              justify-content: space-around;
+              align-items: flex-start;
+              .cart__item-button {
+                color: $c-secondary;
+                background-color: transparent;
+                border: 1px solid $c-primary;
+                border-radius: 10px 0px;
+                padding: 2px 0;
+                transform: translateX(-7%);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button {
+                  padding: 2px 20px;
+                  font-size: $fs-6;
+                  background-color: transparent;
+                  color: $c-secondary;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.5s;
+                  &:hover {
+                    color: $c-primary;
+                  }
+                }
+                span {
+                  font-size: $fs-5;
+                  margin: 0 10px;
+                }
+              }
+              .cart__item-total {
+                color: $c-secondary;
+                transform: translateX(-10%);
+              }
+            }
+          }
+        }
+      }
+      .cart__total {
+        width: 20%;
+        padding: 30px 20px;
+        background-color: $bg-secondary;
+        @include clipPath-cart;
+        border-radius: 0 10px;
+        .cart__total-text {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          color: $c-secondary;
+          font-size: $fs-6;
+          font-weight: $fw-semibold;
+        }
+        .cart__total-description {
+          margin-bottom: 40px;
+          color: $c-secondary;
+          font-size: $fs-6;
+          font-weight: $fw-normal;
+        }
+        .cart__total-button {
+          button {
+            width: 100%;
+            clip-path: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: $fw-semibold;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,33 +1,17 @@
-@mixin btn-primary-trans {
-  padding: 10px 30px;
-  background-color: transparent;
-  color: $c-secondary;
-  border: solid $c-primary 2px;
-  font-weight: $fw-normal;
-  border-radius: 0 10px;
-  cursor: pointer;
-  transition: all 0.5s;
-  &:hover {
-    color: $bg-primary;
-    background-color: $c-primary;
-  }
+// text
+@mixin title {
+  color: $c-primary;
+  font-size: $fs-3;
+  text-transform: uppercase;
 }
 
-@mixin btn-primary-dark {
-  padding: 10px 30px;
-  background-color: $bg-primary;
-  color: $c-secondary;
-  border: none;
-  font-weight: $fw-normal;
-  border-radius: 0 10px;
-  cursor: pointer;
-  transition: all 0.5s;
-  &:hover {
-    color: $bg-primary;
-    background-color: $c-primary;
-  }
+@mixin title-s {
+  color: $c-primary;
+  font-size: $fs-6;
+  text-transform: uppercase;
 }
 
+// button
 @mixin btn-nav {
   background-color: $c-primary;
   width: 30px;
@@ -42,3 +26,22 @@
     color: $c-primary;
   }
 }
+
+// border
+@mixin clipPath-card {
+  border-radius: 10px 0px;
+  clip-path: polygon(0 0, 93% 0, 100% 7%, 100% 100%, 7% 100%, 0 93%);
+}
+
+@mixin clipPath-cart {
+  border-radius: 0px 5px;
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+@mixin clipPath-button {
+  border-radius: 0px 3px;
+  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+}
+
+
+

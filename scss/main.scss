@@ -1,15 +1,14 @@
-// var, extend, mixin
+// abstract
 @import './abstract/variables';
-@import './abstract/extend';
 @import './abstract/mixin';
 
-// reset css browser, default css
-@import './base/reset';
+// default css
 @import './base/default';
 
 // components
 @import './components/button';
 @import './components/card';
+@import './components/header';
 
 // layout
 
@@ -17,17 +16,4 @@
 @import './pages/index.scss';
 @import './pages/detail.scss';
 @import './pages/register.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import './pages/cart';

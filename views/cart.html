@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapStone-JS</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- Font Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="logo">
+            <svg
+              fill="white"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+            >
+              <title>Adidas</title>
+              <path
+                d="M11.936 17.952c0-.644.517-1.16 1.162-1.16.644 0 1.16.516 1.16 1.16a1.157 1.157 0 01-1.16 1.161 1.157 1.157 0 01-1.162-1.16m4.724 0c0-.645.517-1.162 1.161-1.162s1.161.517 1.161 1.161-.517 1.161-1.16 1.161a1.157 1.157 0 01-1.162-1.16m-10.95 0c0-.645.517-1.162 1.161-1.162s1.16.517 1.16 1.161-.516 1.161-1.16 1.161a1.157 1.157 0 01-1.161-1.16m-4.724 0c0-.645.517-1.162 1.161-1.162s1.161.517 1.161 1.161a1.157 1.157 0 01-1.161 1.161 1.157 1.157 0 01-1.16-1.16m9.55-2.052h-1.01v4.063h1.01v-4.063zM3.3 19.964h1.01v-4.063H3.3v.326a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1 0 1.168.938 2.099 2.1 2.099.445 0 .858-.135 1.2-.374v.286zm15.674 0h1.01v-4.063h-1.01v.326a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1a2.092 2.092 0 002.1 2.099c.445 0 .858-.135 1.2-.374v.286zm1.384-1.32c.032.82.732 1.4 1.9 1.4.955 0 1.742-.414 1.742-1.328 0-.636-.358-1.01-1.185-1.17l-.644-.126c-.414-.08-.7-.16-.7-.406 0-.27.278-.39.628-.39.51 0 .716.255.732.557h1.018c-.056-.795-.692-1.328-1.718-1.328-1.057 0-1.686.58-1.686 1.336 0 .922.748 1.073 1.392 1.193l.533.095c.382.072.549.183.549.406 0 .199-.191.397-.645.397-.66 0-.874-.342-.882-.636h-1.034zM8.024 14.517v1.71a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1 0 1.168.938 2.099 2.1 2.099.444 0 .858-.135 1.2-.374v.286h1.01v-5.447h-1.01zm6.226 0v1.71a2.087 2.087 0 00-1.2-.374c-1.161 0-2.1.938-2.1 2.1a2.092 2.092 0 002.1 2.099c.445 0 .858-.135 1.2-.374v.286h1.01v-5.447h-1.01zm-11.626-1.2l.684 1.2h4.716l-1.869-3.229-3.53 2.028zm7.913 2.21v-1.01h3.713l-3.96-6.855L6.751 9.69l2.776 4.827v1.01h1.01zm5.217-1.01h4.723L14.37 3.948l-3.531 2.036 4.915 8.533z"
+              />
+            </svg>
+          </div>
+          <div class="nav-bar">
+            <a href="./index.html">NEW</a>
+            <a href="./cart.html" class="active">CART</a>
+            <a href="./register.html">REGISTER</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="cart">
+      <div class="container">
+        <div class="cart__title">
+          <h3>your cart</h3>
+          <p>You are eligible for free standard shipping in the US.</p>
+        </div>
+        <div class="cart__content">
+          <div class="cart__list">
+            <div class="cart__list-text">
+              <div class="product-text"><p>Product</p></div>
+              <div class="quantity-text">
+                <p>Quantity</p>
+                <p>Total</p>
+              </div>
+            </div>
+            <div class="cart__list-item">
+              <div class="cart__item">
+                <div class="cart__item-content-left">
+                  <div class="cart__item-product-pic">
+                    <img
+                      src="../assets/img/product/CONTINENTAL_80.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="cart__item-product-description">
+                    <p class="name">Nike Basketball Kobe Bryan</p>
+                    <p class="short-description">US 7.5 / Men / Yellow</p>
+                    <p class="price">$ 350.00</p>
+                  </div>
+                </div>
+                <div class="cart__item-content-right">
+                  <div class="cart__item-button">
+                    <button class="btn-increase">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span>1</span>
+                    <button class="btn-reduce">
+                      <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                  <div class="cart__item-total">
+                    <p>$ 350.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item">
+                <div class="cart__item-content-left">
+                  <div class="cart__item-product-pic">
+                    <img
+                      src="../assets/img/product/CONTINENTAL_80.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="cart__item-product-description">
+                    <p class="name">Nike Basketball Kobe Bryan</p>
+                    <p class="short-description">US 7.5 / Men / Yellow</p>
+                    <p class="price">$ 350.00</p>
+                  </div>
+                </div>
+                <div class="cart__item-content-right">
+                  <div class="cart__item-button">
+                    <button class="btn-increase">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span>1</span>
+                    <button class="btn-reduce">
+                      <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                  <div class="cart__item-total">
+                    <p>$ 350.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item">
+                <div class="cart__item-content-left">
+                  <div class="cart__item-product-pic">
+                    <img
+                      src="../assets/img/product/CONTINENTAL_80.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="cart__item-product-description">
+                    <p class="name">Nike Basketball Kobe Bryan</p>
+                    <p class="short-description">US 7.5 / Men / Yellow</p>
+                    <p class="price">$ 350.00</p>
+                  </div>
+                </div>
+                <div class="cart__item-content-right">
+                  <div class="cart__item-button">
+                    <button class="btn-increase">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <span>1</span>
+                    <button class="btn-reduce">
+                      <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                  <div class="cart__item-total">
+                    <p>$ 350.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__total">
+            <div class="cart__total-text">
+              <p>Total</p>
+              <p>$ 600.00</p>
+            </div>
+            <div class="cart__total-description">
+              <p>
+                Shipping & taxes calculated at checkout. Orders outside of the
+                US may be subject to import fees / duties
+              </p>
+            </div>
+            <div class="cart__total-button">
+              <button class="btn-primary-trans">checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+
+    <!-- Main Js -->
+    <script type="module" src="../controllers/main.js"></script>
+  </body>
+</html>
