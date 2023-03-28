@@ -7,9 +7,9 @@
   transition: all 0.7s;
   &:hover {
     box-shadow: 0px 0px 10px 2px $c-primary;
-  }
-  &:hover img {
-    transform: rotateZ(10deg) scale(1.05);
+    img {
+      transform: rotateZ(10deg) scale(1.05);
+    }
   }
   .card-img {
     img {

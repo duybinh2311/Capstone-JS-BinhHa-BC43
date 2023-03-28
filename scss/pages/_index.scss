@@ -27,6 +27,11 @@
             color: $c-primary;
             margin-bottom: 30px;
             opacity: 0;
+            @for $i from 1 through 5 {
+              i:nth-child(#{$i}) {
+                animation: dominos 3s 0.125s * $i infinite ease;
+              }
+            }
             i {
               margin-right: 5px;
               font-size: $fs-6;
@@ -45,11 +50,11 @@
             transition: all 1s;
             &:hover {
               transform: rotate(0deg) translate(100px, -30px);
-            }
-            &:hover + p {
-              color: $c-primary;
-              letter-spacing: 0px;
-              font-weight: $fw-semibold;
+              + p {
+                color: $c-primary;
+                letter-spacing: 0px;
+                font-weight: $fw-semibold;
+              }
             }
           }
           p {
@@ -136,16 +141,5 @@
         filter: grayscale(100%);
       }
     }
-  }
-}
-
-@keyframes downUp {
-  0% {
-    opacity: 0;
-    transform: translateX(-150px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
   }
 }

@@ -13,9 +13,6 @@
           font-weight: $fw-normal;
           position: relative;
           transition: all 0.5s;
-          &:hover {
-            color: $c-primary;
-          }
           &::after {
             content: '';
             position: absolute;
@@ -23,11 +20,14 @@
             height: 2px;
             background-color: $c-primary;
             left: 0;
-            bottom: -10px;
+            bottom: -5px;
             transition: all 0.5s;
           }
-          &:hover::after {
-            width: 100%;
+          &:hover {
+            color: $c-primary;
+            &::after {
+              width: 100%;
+            }
           }
         }
         .active {

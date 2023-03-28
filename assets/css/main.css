@@ -1,3 +1,26 @@
+@keyframes downUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes dominos {
+  50% {
+    opacity: 0.7;
+    color: #ffffff;
+  }
+  75% {
+    color: #ffc014;
+  }
+  80% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -20,6 +43,22 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #202221;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffc014;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fee715;
 }
 
 .btn-primary-trans {
@@ -113,9 +152,6 @@ body {
   position: relative;
   transition: all 0.5s;
 }
-.header .container .header__content .nav-bar a:hover {
-  color: #ffc014;
-}
 .header .container .header__content .nav-bar a::after {
   content: "";
   position: absolute;
@@ -123,8 +159,11 @@ body {
   height: 2px;
   background-color: #ffc014;
   left: 0;
-  bottom: -10px;
+  bottom: -5px;
   transition: all 0.5s;
+}
+.header .container .header__content .nav-bar a:hover {
+  color: #ffc014;
 }
 .header .container .header__content .nav-bar a:hover::after {
   width: 100%;
@@ -169,6 +208,21 @@ body {
   color: #ffc014;
   margin-bottom: 30px;
   opacity: 0;
+}
+.carousel .container .carousel__list .carousel__item .content-left .carousel__star i:nth-child(1) {
+  animation: dominos 3s 0.125s infinite ease;
+}
+.carousel .container .carousel__list .carousel__item .content-left .carousel__star i:nth-child(2) {
+  animation: dominos 3s 0.25s infinite ease;
+}
+.carousel .container .carousel__list .carousel__item .content-left .carousel__star i:nth-child(3) {
+  animation: dominos 3s 0.375s infinite ease;
+}
+.carousel .container .carousel__list .carousel__item .content-left .carousel__star i:nth-child(4) {
+  animation: dominos 3s 0.5s infinite ease;
+}
+.carousel .container .carousel__list .carousel__item .content-left .carousel__star i:nth-child(5) {
+  animation: dominos 3s 0.625s infinite ease;
 }
 .carousel .container .carousel__list .carousel__item .content-left .carousel__star i {
   margin-right: 5px;
@@ -294,16 +348,6 @@ body {
   filter: grayscale(100%);
 }
 
-@keyframes downUp {
-  0% {
-    opacity: 0;
-    transform: translateX(-150px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 .cart {
   margin: 80px 0;
 }

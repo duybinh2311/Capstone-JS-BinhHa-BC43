@@ -1,6 +1,7 @@
 // abstract
 @import './abstract/variables';
 @import './abstract/mixin';
+@import './abstract/animation';
 
 // default css
 @import './base/default';
@@ -8,9 +9,9 @@
 // components
 @import './components/button';
 @import './components/card';
-@import './components/header';
 
 // layout
+@import './layouts/header';
 
 // pages
 @import './pages/index.scss';
