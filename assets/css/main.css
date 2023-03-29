@@ -419,6 +419,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   margin-bottom: 40px;
   position: relative;
+  color: #ffffff;
 }
 .form .container .form-container .form__content .form-group:not(:nth-child(7)) label {
   position: absolute;
@@ -438,6 +439,7 @@ input::-webkit-inner-spin-button {
   background: transparent;
   font-size: 16px;
   caret-color: #ffc014;
+  color: #ffffff;
   border-bottom: 1px solid #ffc014;
 }
 .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):focus ~ label, .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):valid ~ label {

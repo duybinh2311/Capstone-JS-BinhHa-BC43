@@ -39,6 +39,7 @@
           flex-direction: column;
           margin-bottom: 40px;
           position: relative;
+          color: $c-secondary;
           label {
             position: absolute;
             top: 0;
@@ -57,6 +58,7 @@
             background: transparent;
             font-size: 16px;
             caret-color: $c-primary;
+            color: $c-secondary;
             border-bottom: 1px solid $c-primary;
             &:focus ~ label,
             &:valid ~ label {
