@@ -11,26 +11,6 @@
       border-radius: 15px;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25),
         7px 7px 10px rgba(0, 0, 0, 0.22);
-      &.right-panel-active {
-        .form__sign-up {
-          transform: translateX(-100%) !important;
-        }
-        .form__sign-in {
-          transform: translateX(0) !important;
-        }
-        .overlay-container {
-          transform: translateX(-100%);
-          .overlay {
-            transform: translateX(50%);
-            .overlay-left {
-              transform: translateX(0);
-            }
-            .overlay-right {
-              transform: translateX(20%);
-            }
-          }
-        }
-      }
       .form__content {
         display: flex;
         justify-content: center;
@@ -47,7 +27,6 @@
             padding: 2px 0;
             font-size: 16px;
             color: $c-secondary;
-            transition: all 0.3s ease;
           }
           input:not([type='radio']) {
             height: 30px;
@@ -136,12 +115,26 @@
         .form__sign-up {
           border-radius: 15px 0 0 15px;
           background-image: $gradient-radial;
-          transform: translateX(0);
+          overflow: hidden;
+          @for $i from 1 through 8 {
+            .item:nth-child(#{$i}) {
+              transform: translateX(0);
+              transition: all 0.6s ease-in-out;
+              transition-delay: 50ms * $i;
+            }
+          }
         }
         .form__sign-in {
           border-radius: 0 15px 15px 0;
           background-image: $gradient-radial;
-          transform: translateX(100%);
+          overflow: hidden;
+          @for $i from 1 through 4 {
+            .item:nth-child(#{$i}) {
+              transform: translateX(-100%);
+              transition: all 0.6s ease-in-out;
+              transition-delay: 50ms * $i;
+            }
+          }
         }
       }
       .overlay-container {
@@ -204,6 +197,34 @@
           .overlay-right {
             right: 0;
             transform: translateX(0);
+          }
+        }
+      }
+      &.right-panel-active {
+        .form__sign-up {
+          @for $i from 1 through 8 {
+            .item:nth-child(#{$i}) {
+              transform: translateX(100%);
+            }
+          }
+        }
+        .form__sign-in {
+          @for $i from 1 through 4 {
+            .item:nth-child(#{$i}) {
+              transform: translateX(0%);
+            }
+          }
+        }
+        .overlay-container {
+          transform: translateX(-100%);
+          .overlay {
+            transform: translateX(50%);
+            .overlay-left {
+              transform: translateX(0);
+            }
+            .overlay-right {
+              transform: translateX(20%);
+            }
           }
         }
       }

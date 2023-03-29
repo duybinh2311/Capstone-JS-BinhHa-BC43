@@ -41,7 +41,6 @@
   font-size: $fs-7;
   padding: 12px 45px;
   text-transform: capitalize;
-  transition: all 0.5s;
   cursor: pointer;
   @include clipPath-4corner();
   &:hover {

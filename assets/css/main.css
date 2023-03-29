@@ -392,24 +392,6 @@ input::-webkit-inner-spin-button {
   border-radius: 15px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25), 7px 7px 10px rgba(0, 0, 0, 0.22);
 }
-.form .container .form-container.right-panel-active .form__sign-up {
-  transform: translateX(-100%) !important;
-}
-.form .container .form-container.right-panel-active .form__sign-in {
-  transform: translateX(0) !important;
-}
-.form .container .form-container.right-panel-active .overlay-container {
-  transform: translateX(-100%);
-}
-.form .container .form-container.right-panel-active .overlay-container .overlay {
-  transform: translateX(50%);
-}
-.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-left {
-  transform: translateX(0);
-}
-.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-right {
-  transform: translateX(20%);
-}
 .form .container .form-container .form__content {
   display: flex;
   justify-content: center;
@@ -428,7 +410,6 @@ input::-webkit-inner-spin-button {
   padding: 2px 0;
   font-size: 16px;
   color: #ffffff;
-  transition: all 0.3s ease;
 }
 .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]) {
   height: 30px;
@@ -520,7 +501,6 @@ input::-webkit-inner-spin-button {
   font-size: 12px;
   padding: 12px 45px;
   text-transform: capitalize;
-  transition: all 0.5s;
   cursor: pointer;
   -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
           clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
@@ -532,12 +512,72 @@ input::-webkit-inner-spin-button {
 .form .container .form-container .form__content .form__sign-up {
   border-radius: 15px 0 0 15px;
   background-image: radial-gradient(#212322, #0e100f);
+  overflow: hidden;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(1) {
   transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 50ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(2) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 100ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(3) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 150ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(4) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 200ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(5) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 250ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(6) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 300ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(7) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 350ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(8) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 400ms;
 }
 .form .container .form-container .form__content .form__sign-in {
   border-radius: 0 15px 15px 0;
   background-image: radial-gradient(#212322, #0e100f);
-  transform: translateX(100%);
+  overflow: hidden;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(1) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 50ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(2) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 100ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(3) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 150ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(4) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 200ms;
 }
 .form .container .form-container .overlay-container {
   position: absolute;
@@ -601,6 +641,54 @@ input::-webkit-inner-spin-button {
 .form .container .form-container .overlay-container .overlay .overlay-right {
   right: 0;
   transform: translateX(0);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(1) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(2) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(3) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(4) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(5) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(6) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(7) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(8) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(1) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(2) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(3) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(4) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay {
+  transform: translateX(50%);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-left {
+  transform: translateX(0);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-right {
+  transform: translateX(20%);
 }
 
 /* Cart */
