@@ -53,7 +53,7 @@
       <div class="container">
         <div class="form-container">
           <div class="form__content">
-            <form class="form__sign-up">
+            <form class="form-panel form__sign-up">
               <h3>Sign Up</h3>
               <div class="form-group">
                 <input type="text" id="email" required="" />
@@ -81,10 +81,16 @@
                 <span class="form-message"></span>
               </div>
               <div class="form-group">
-                <input type="radio" name="gender" id="gender-male" />
-                <label for="gender-male">Male</label>
-                <label for="gender-female">Female</label>
-                <input type="radio" name="gender" id="gender-female" />
+                <label class="radio-container"
+                  >Male
+                  <input type="radio" checked="checked" name="gender" value="true"/>
+                  <span class="check-radio"></span>
+                </label>
+                <label class="radio-container"
+                  >Female
+                  <input type="radio" name="gender" value="false"/>
+                  <span class="check-radio"></span>
+                </label>
               </div>
               <div class="form__signup-submit">
                 <button class="btn-sign-up" id="btn-sign-up" type="submit">
@@ -92,7 +98,7 @@
                 </button>
               </div>
             </form>
-            <form class="form__sign-in">
+            <form class="form-panel form__sign-in">
               <h3>Sign In</h3>
               <div class="form-group">
                 <input type="text" id="email-signIn" required="" />
@@ -106,24 +112,24 @@
               </div>
               <div class="form__signup-submit">
                 <button class="btn-sign-in" id="btn-sign-in" type="submit">
-                  Create Account
+                  Sign In
                 </button>
               </div>
             </form>
           </div>
-          <div class="overlay">
-            <div class="overlay-container">
-              <div class="overlay-left">
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
                 <h3>Welcome Back</h3>
                 <p>
                   To keep connected with us please login with your personal info
                 </p>
-                <button class="btn-overlay" id="signIn">Sign In</button>
+                <button class="btn-overlay" id="signIn">Sign Up</button>
               </div>
-              <div class="overlay-right">
+              <div class="overlay-panel overlay-right">
                 <h3>Hello, Friend!</h3>
                 <p>Enter your personal details and start journey with us</p>
-                <button class="btn-overlay" id="signUp">Sign Up</button>
+                <button class="btn-overlay" id="signUp">Sign In</button>
               </div>
             </div>
           </div>

@@ -130,10 +130,11 @@
               width: 100%;
               clip-path: none;
               border-radius: 5px;
+              border: solid 1px transparent;
               text-transform: uppercase;
               font-weight: $fw-semibold;
               &:hover {
-                border: solid 2px $c-primary;
+                border: solid 1px $c-primary;
               }
             }
           }

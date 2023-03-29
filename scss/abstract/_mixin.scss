@@ -34,6 +34,22 @@
   }
 }
 
+@mixin btn-primary-polygon {
+  background-color: $c-primary;
+  border: none;
+  font-weight: $fw-semibold;
+  font-size: $fs-7;
+  padding: 12px 45px;
+  text-transform: capitalize;
+  transition: all 0.5s;
+  cursor: pointer;
+  @include clipPath-4corner();
+  &:hover {
+    background-color: $bg-secondary;
+    color: $c-secondary;
+  }
+}
+
 /* Clip Path Border */
 @mixin clipPath-card {
   border-radius: 10px 0px;
@@ -50,5 +66,6 @@
   clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
 }
 
-
-
+@mixin clipPath-4corner {
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
