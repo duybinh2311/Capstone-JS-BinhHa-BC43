@@ -1,4 +1,5 @@
-.btn-primary-trans {
+/* Button Light */
+.btn-primary {
   @include clipPath-button;
   padding: 10px 30px;
   background-color: $c-primary;
@@ -14,6 +15,7 @@
   }
 }
 
+/* Button Dark */
 .btn-primary-dark {
   @include clipPath-button;
   padding: 10px 30px;

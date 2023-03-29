@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapStone-JS-BinhHa</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- Font Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="logo">
+            <svg
+              fill="white"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+            >
+              <title>Adidas</title>
+              <path
+                d="M11.936 17.952c0-.644.517-1.16 1.162-1.16.644 0 1.16.516 1.16 1.16a1.157 1.157 0 01-1.16 1.161 1.157 1.157 0 01-1.162-1.16m4.724 0c0-.645.517-1.162 1.161-1.162s1.161.517 1.161 1.161-.517 1.161-1.16 1.161a1.157 1.157 0 01-1.162-1.16m-10.95 0c0-.645.517-1.162 1.161-1.162s1.16.517 1.16 1.161-.516 1.161-1.16 1.161a1.157 1.157 0 01-1.161-1.16m-4.724 0c0-.645.517-1.162 1.161-1.162s1.161.517 1.161 1.161a1.157 1.157 0 01-1.161 1.161 1.157 1.157 0 01-1.16-1.16m9.55-2.052h-1.01v4.063h1.01v-4.063zM3.3 19.964h1.01v-4.063H3.3v.326a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1 0 1.168.938 2.099 2.1 2.099.445 0 .858-.135 1.2-.374v.286zm15.674 0h1.01v-4.063h-1.01v.326a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1a2.092 2.092 0 002.1 2.099c.445 0 .858-.135 1.2-.374v.286zm1.384-1.32c.032.82.732 1.4 1.9 1.4.955 0 1.742-.414 1.742-1.328 0-.636-.358-1.01-1.185-1.17l-.644-.126c-.414-.08-.7-.16-.7-.406 0-.27.278-.39.628-.39.51 0 .716.255.732.557h1.018c-.056-.795-.692-1.328-1.718-1.328-1.057 0-1.686.58-1.686 1.336 0 .922.748 1.073 1.392 1.193l.533.095c.382.072.549.183.549.406 0 .199-.191.397-.645.397-.66 0-.874-.342-.882-.636h-1.034zM8.024 14.517v1.71a2.087 2.087 0 00-1.2-.374c-1.162 0-2.1.938-2.1 2.1 0 1.168.938 2.099 2.1 2.099.444 0 .858-.135 1.2-.374v.286h1.01v-5.447h-1.01zm6.226 0v1.71a2.087 2.087 0 00-1.2-.374c-1.161 0-2.1.938-2.1 2.1a2.092 2.092 0 002.1 2.099c.445 0 .858-.135 1.2-.374v.286h1.01v-5.447h-1.01zm-11.626-1.2l.684 1.2h4.716l-1.869-3.229-3.53 2.028zm7.913 2.21v-1.01h3.713l-3.96-6.855L6.751 9.69l2.776 4.827v1.01h1.01zm5.217-1.01h4.723L14.37 3.948l-3.531 2.036 4.915 8.533z"
+              />
+            </svg>
+          </div>
+          <div class="nav-bar">
+            <a href="./index.html">NEW</a>
+            <a href="./detail.html">DETAIL</a>
+            <a href="./cart.html">CART</a>
+            <a href="./account.html" class="active">ACCOUNT</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="form">
+      <div class="container">
+        <div class="form-container">
+          <div class="form__content">
+            <form class="form__sign-up">
+              <h3>Sign Up</h3>
+              <div class="form-group">
+                <input type="text" id="email" required="" />
+                <label for="email">Email</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="password" id="password" required="" />
+                <label for="password">Password</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="password" id="password-confirm" required="" />
+                <label for="password-confirm">Password Confirm</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="name" required="" />
+                <label for="name">Name</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="number" id="phone" required="" />
+                <label for="phone">Phone</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="gender" id="gender-male" />
+                <label for="gender-male">Male</label>
+                <label for="gender-female">Female</label>
+                <input type="radio" name="gender" id="gender-female" />
+              </div>
+              <div class="form__signup-submit">
+                <button class="btn-sign-up" id="btn-sign-up" type="submit">
+                  Create Account
+                </button>
+              </div>
+            </form>
+            <form class="form__sign-in">
+              <h3>Sign In</h3>
+              <div class="form-group">
+                <input type="text" id="email-signIn" required="" />
+                <label for="email-signIn">Email</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <input type="password" id="password-signIn" required="" />
+                <label for="password-signIn">Password</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form__signup-submit">
+                <button class="btn-sign-in" id="btn-sign-in" type="submit">
+                  Create Account
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="overlay">
+            <div class="overlay-container">
+              <div class="overlay-left">
+                <h3>Welcome Back</h3>
+                <p>
+                  To keep connected with us please login with your personal info
+                </p>
+                <button class="btn-overlay" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-right">
+                <h3>Hello, Friend!</h3>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="btn-overlay" id="signUp">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+
+    <!-- Account Js -->
+    <script src="../controllers/account/method_account.js"></script>
+    <script src="../controllers/account/account.js"></script>
+  </body>
+</html>

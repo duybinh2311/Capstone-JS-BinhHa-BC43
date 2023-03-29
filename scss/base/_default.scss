@@ -1,4 +1,4 @@
-// Custom Default CSS
+/* Custom Default CSS */
 * {
   margin: 0px;
   padding: 0px;
@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
 }
 
-// Custom Scrollbar 
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -40,3 +40,8 @@ body {
   background: $c-primary-light;
 }
 
+/* Hide Arrows Input Number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

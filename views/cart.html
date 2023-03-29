@@ -42,8 +42,9 @@
           </div>
           <div class="nav-bar">
             <a href="./index.html">NEW</a>
+            <a href="./detail.html">DETAIL</a>
             <a href="./cart.html" class="active">CART</a>
-            <a href="./register.html">REGISTER</a>
+            <a href="./account.html">ACCOUNT</a>
           </div>
         </div>
       </div>
@@ -153,19 +154,32 @@
               </div>
             </div>
           </div>
-          <div class="cart__total">
-            <div class="cart__total-text">
-              <p>Total</p>
-              <p>$ 600.00</p>
+          <div class="cart__payment">
+            <div class="cart__payment-total">
+              <div class="cart__payment-text">
+                <p>Total</p>
+                <p>$ 600.00</p>
+              </div>
+              <div class="cart__payment-description">
+                <p>
+                  Shipping & taxes calculated at checkout. Orders outside of the
+                  US may be subject to import fees / duties
+                </p>
+              </div>
+              <div class="cart__payment-button">
+                <button class="btn-primary">checkout</button>
+              </div>
             </div>
-            <div class="cart__total-description">
-              <p>
-                Shipping & taxes calculated at checkout. Orders outside of the
-                US may be subject to import fees / duties
-              </p>
-            </div>
-            <div class="cart__total-button">
-              <button class="btn-primary-trans">checkout</button>
+            <div class="cart__payment-accepted">
+              <div class="cart__payment-title">
+                <h4>We Accept</h4>
+              </div>
+              <div class="cart__payment-logo">
+                <img src="../assets/img/payout/MasterCard.png" alt="" />
+                <img src="../assets/img/payout/VisaCard.png" alt="" />
+                <img src="../assets/img/payout/Paypal.png" alt="" />
+                <img src="../assets/img/payout/MoMo_Logo.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -175,7 +189,8 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
-    <!-- Main Js -->
-    <script type="module" src="../controllers/main.js"></script>
+    <!-- Cart Js -->
+    <script src="../controllers/cart/method_cart.js"></script>
+    <script src="../controllers/cart/cart.js"></script>
   </body>
 </html>

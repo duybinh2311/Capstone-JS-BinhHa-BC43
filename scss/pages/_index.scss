@@ -1,4 +1,4 @@
-// carousel css
+/* Carousel */
 .carousel {
   margin-top: 50px;
   .container {
@@ -37,8 +37,9 @@
               font-size: $fs-6;
             }
           }
-          .btn-primary-trans {
+          .btn-primary {
             opacity: 0;
+            display: none;
           }
         }
         .content-right {
@@ -81,18 +82,19 @@
         z-index: 10;
         .content-left {
           .carousel__slogan {
-            animation: downUp 1s forwards;
+            animation: fadeInLeft 1s forwards;
           }
           .carousel__description {
-            animation: downUp 1s forwards;
+            animation: fadeInLeft 1s forwards;
             animation-delay: 0.5s;
           }
           .carousel__star {
-            animation: downUp 1s forwards;
+            animation: fadeInLeft 1s forwards;
             animation-delay: 1s;
           }
-          .btn-primary-trans {
+          .btn-primary {
             opacity: 1;
+            display: inline-block;
           }
         }
         .content-right {
@@ -120,9 +122,9 @@
   }
 }
 
-// product css
+/* Product */
 .product {
-  margin: 130px 0px;
+  margin: 130px 0px 80px;
   .container {
     .title {
       text-align: center;

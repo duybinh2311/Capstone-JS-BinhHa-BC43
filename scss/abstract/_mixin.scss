@@ -1,4 +1,4 @@
-// text
+/* Text */
 @mixin title {
   color: $c-primary;
   font-size: $fs-3;
@@ -11,7 +11,14 @@
   text-transform: uppercase;
 }
 
-// button
+@mixin title-h3 {
+  font-size: $fs-3;
+  color: $c-primary;
+  font-weight: $fw-normal;
+  text-transform: capitalize;
+}
+
+/* Button */
 @mixin btn-nav {
   background-color: $c-primary;
   width: 30px;
@@ -27,7 +34,7 @@
   }
 }
 
-// border
+/* Clip Path Border */
 @mixin clipPath-card {
   border-radius: 10px 0px;
   clip-path: polygon(0 0, 93% 0, 100% 7%, 100% 100%, 7% 100%, 0 93%);
