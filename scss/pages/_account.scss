@@ -26,6 +26,7 @@
             left: 5px;
             padding: 2px 0;
             font-size: 16px;
+            transition: all 0.3s ease-in-out;
             color: $c-secondary;
           }
           input:not([type='radio']) {
@@ -63,6 +64,7 @@
               opacity: 0;
               &:checked ~ .check-radio {
                 background-color: $c-primary;
+                transition: all 0.3s ease-in-out;
               }
               &:checked ~ .check-radio::after {
                 display: block;
@@ -71,10 +73,11 @@
             .check-radio {
               height: 20px;
               width: 20px;
-              background-color: $bg-secondary;
+              background-color: $c-secondary;
               border-radius: 50%;
               display: inline-block;
               position: relative;
+              transition: all 0.3s ease-in-out;
               &::after {
                 content: '';
                 position: absolute;
@@ -90,7 +93,7 @@
               }
             }
             &:hover .check-radio {
-              background-color: $bg-secondary;
+              background-color: lighten($bg-primary, 20%);
             }
           }
         }

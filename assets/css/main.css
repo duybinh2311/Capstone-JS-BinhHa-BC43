@@ -409,6 +409,7 @@ input::-webkit-inner-spin-button {
   left: 5px;
   padding: 2px 0;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
   color: #ffffff;
 }
 .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]) {
@@ -448,6 +449,7 @@ input::-webkit-inner-spin-button {
 }
 .form .container .form-container .form__content .form-group:nth-child(7) .radio-container input:checked ~ .check-radio {
   background-color: #ffc014;
+  transition: all 0.3s ease-in-out;
 }
 .form .container .form-container .form__content .form-group:nth-child(7) .radio-container input:checked ~ .check-radio::after {
   display: block;
@@ -455,10 +457,11 @@ input::-webkit-inner-spin-button {
 .form .container .form-container .form__content .form-group:nth-child(7) .radio-container .check-radio {
   height: 20px;
   width: 20px;
-  background-color: #202221;
+  background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .form .container .form-container .form__content .form-group:nth-child(7) .radio-container .check-radio::after {
   content: "";
@@ -474,7 +477,7 @@ input::-webkit-inner-spin-button {
   transition: all 0.5s ease-in-out;
 }
 .form .container .form-container .form__content .form-group:nth-child(7) .radio-container:hover .check-radio {
-  background-color: #202221;
+  background-color: #434b47;
 }
 .form .container .form-container .form__content .form-panel {
   width: 50%;
