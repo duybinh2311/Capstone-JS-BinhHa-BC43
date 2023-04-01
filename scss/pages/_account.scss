@@ -40,7 +40,7 @@
             caret-color: $c-primary;
             color: $c-secondary;
             border-bottom: 1px solid $c-primary;
-            &:focus ~ label,
+            &:focus:valid ~ label,
             &:valid ~ label {
               top: -20px;
               left: 0;

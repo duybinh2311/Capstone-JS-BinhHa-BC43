@@ -2,10 +2,26 @@
 $c-primary: #ffc014;
 $c-primary-light: #fee715;
 $c-secondary: #ffffff;
+$color-social: (
+  youtube: #f70000,
+  twitter: #1a8cd8,
+  facebook: #1873eb,
+  instagram:
+    radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    ),
+);
 
 /* Background Color */
 $bg-primary: #131514ff;
+$bg-primary-darken: #111111;
 $bg-secondary: #202221;
+$bg-secondary-light: #7e7e7e;
 $gradient-radial: radial-gradient(#212322, #0e100f);
 
 /* Text */

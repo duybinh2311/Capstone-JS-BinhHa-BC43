@@ -1,19 +1,20 @@
-// abstract
+/* Abstract */
 @import './abstract/variables';
 @import './abstract/mixin';
 @import './abstract/animation';
 
-// default css
+/* Base */
 @import './base/default';
 
-// components
+/* Components */
 @import './components/button';
 @import './components/card';
 
-// layout
+/* Layouts */
 @import './layouts/header';
+@import './layouts/footer';
 
-// pages
+/* Pages */
 @import './pages/index.scss';
 @import './pages/detail.scss';
 @import './pages/account.scss';

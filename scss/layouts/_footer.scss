@@ -1,0 +1,98 @@
+.footer {
+  background-color: $bg-primary-darken;
+  padding: 30px 0 15px;
+  .container {
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      .footer__store {
+        flex-grow: 1;
+        li:first-child {
+          margin-bottom: 5px;
+          a {
+            font-size: $fs-6;
+            text-transform: uppercase;
+            font-weight: $fw-semibold;
+          }
+        }
+        a {
+          color: $c-secondary;
+          font-size: $fs-7;
+          text-transform: capitalize;
+        }
+      }
+      .footer__get-help {
+        flex-grow: 1;
+        li:first-child {
+          margin-bottom: 5px;
+          a {
+            font-size: $fs-6;
+            text-transform: uppercase;
+            font-weight: $fw-semibold;
+            color: $c-secondary;
+          }
+        }
+        a {
+          color: $bg-secondary-light;
+          font-size: $fs-7;
+          text-transform: capitalize;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            color: $c-secondary;
+          }
+        }
+      }
+      .footer__about {
+        @extend .footer__get-help;
+      }
+      .footer__social {
+        flex-grow: 2;
+        text-align: right;
+        a {
+          display: inline-block;
+          position: relative;
+          margin-left: 10px;
+          width: 35px;
+          height: 35px;
+          background-color: $bg-secondary;
+          color: $bg-secondary-light;
+          border-radius: 50%;
+          text-align: center;
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            i {
+              transform: translateX(300%);
+            }
+            i:first-child {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          i:first-child {
+            color: $c-secondary;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            transition: all 0.3s ease-in-out;
+          }
+          i {
+            line-height: 35px;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        @each $icon, $value in $color-social {
+          .icon-#{$icon}:hover {
+            background: $value;
+          }
+        }
+      }
+    }
+    .footer__coppy-right {
+      font-size: $fs-7;
+      color: $bg-secondary-light;
+      text-align: center;
+      margin: 30px 0 0;
+    }
+  }
+}
