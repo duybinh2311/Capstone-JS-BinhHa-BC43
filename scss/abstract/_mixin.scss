@@ -68,3 +68,20 @@
 @mixin clipPath-4corner {
   clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
 }
+
+/* Responsive */
+
+@mixin responsive($device) {
+  @if (map-has-key($map: $breakpoints, $key: $device)) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $device,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+  else {
+    @warn "{$device} is't in breakpoint";
+  }
+}

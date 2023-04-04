@@ -42,7 +42,6 @@
           </div>
           <div class="nav-bar">
             <a href="../index.html">NEW</a>
-            <a href="./detail.html">DETAIL</a>
             <a href="#" class="active">CART</a>
             <a href="./account.html">ACCOUNT</a>
           </div>
@@ -65,100 +64,13 @@
               </div>
             </div>
             <div class="cart__list-item">
-              <div class="cart__item">
-                <div class="cart__item-content-left">
-                  <div class="cart__item-product-pic">
-                    <img
-                      src="../assets/img/product/CONTINENTAL_80.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="cart__item-product-description">
-                    <p class="name">Nike Basketball Kobe Bryan</p>
-                    <p class="short-description">US 7.5 / Men / Yellow</p>
-                    <p class="price">$ 350.00</p>
-                  </div>
-                </div>
-                <div class="cart__item-content-right">
-                  <div class="cart__item-button">
-                    <button class="btn-increase">
-                      <i class="fa fa-arrow-left"></i>
-                    </button>
-                    <span>1</span>
-                    <button class="btn-reduce">
-                      <i class="fa fa-arrow-right"></i>
-                    </button>
-                  </div>
-                  <div class="cart__item-total">
-                    <p>$ 350.00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cart__item">
-                <div class="cart__item-content-left">
-                  <div class="cart__item-product-pic">
-                    <img
-                      src="../assets/img/product/CONTINENTAL_80.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="cart__item-product-description">
-                    <p class="name">Nike Basketball Kobe Bryan</p>
-                    <p class="short-description">US 7.5 / Men / Yellow</p>
-                    <p class="price">$ 350.00</p>
-                  </div>
-                </div>
-                <div class="cart__item-content-right">
-                  <div class="cart__item-button">
-                    <button class="btn-increase">
-                      <i class="fa fa-arrow-left"></i>
-                    </button>
-                    <span>1</span>
-                    <button class="btn-reduce">
-                      <i class="fa fa-arrow-right"></i>
-                    </button>
-                  </div>
-                  <div class="cart__item-total">
-                    <p>$ 350.00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cart__item">
-                <div class="cart__item-content-left">
-                  <div class="cart__item-product-pic">
-                    <img
-                      src="../assets/img/product/CONTINENTAL_80.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="cart__item-product-description">
-                    <p class="name">Nike Basketball Kobe Bryan</p>
-                    <p class="short-description">US 7.5 / Men / Yellow</p>
-                    <p class="price">$ 350.00</p>
-                  </div>
-                </div>
-                <div class="cart__item-content-right">
-                  <div class="cart__item-button">
-                    <button class="btn-increase">
-                      <i class="fa fa-arrow-left"></i>
-                    </button>
-                    <span>1</span>
-                    <button class="btn-reduce">
-                      <i class="fa fa-arrow-right"></i>
-                    </button>
-                  </div>
-                  <div class="cart__item-total">
-                    <p>$ 350.00</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="cart__payment">
             <div class="cart__payment-total">
               <div class="cart__payment-text">
                 <p>Total</p>
-                <p>$ 600.00</p>
+                <p>$ <span class="total-cart">0.00</span></p>
               </div>
               <div class="cart__payment-description">
                 <p>
@@ -234,9 +146,7 @@
           </div>
         </div>
         <div class="footer__coppy-right">
-          <p>
-            © 2023 Adidas, Inc. All Rights Reserved
-          </p>
+          <p>© 2023 Adidas, Inc. All Rights Reserved</p>
         </div>
       </div>
     </footer>
@@ -245,7 +155,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
     <!-- Cart Js -->
-    <script src="../controllers/cart/method_cart.js"></script>
-    <script src="../controllers/cart/cart.js"></script>
+    <script type="module" src="../controllers/cart.js"></script>
   </body>
 </html>

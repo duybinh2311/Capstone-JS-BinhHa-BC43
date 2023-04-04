@@ -3,7 +3,7 @@
   @include clipPath-card;
   text-align: center;
   background-color: $c-secondary;
-  padding: 30px 30px 10px;
+  padding: 0px 10px;
   cursor: pointer;
   transition: all 0.7s;
   &:hover {
@@ -14,7 +14,7 @@
   }
   .card-img {
     img {
-      width: 100%;
+      width: 70%;
       transition: all 0.7s;
     }
   }
@@ -28,6 +28,7 @@
     font-size: $fs-6;
     font-weight: $fw-light;
     margin: 10px 0;
+    color: $bg-primary;
   }
   .card-button {
     display: flex;
