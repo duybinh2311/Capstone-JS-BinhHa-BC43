@@ -1,40 +1,46 @@
 export default class Product {
-  /* Get Data From API */
+  /* Get Product From API */
   getProductList(selectorProduct) {
     axios
       .get('https://shop.cyberlearn.vn/api/Product')
       .then((result) => {
+        /* Render Product */
         document.querySelector(selectorProduct).innerHTML =
-          this.renderProductList(result.data.content)
+          this.renderProductList(result.data.content, './views/')
       })
       .catch((err) => {
         console.log(err)
       })
   }
-  async getProductDetail(selectorDetail, selectorProduct) {
+
+  /* Get Detail Product From API */
+  getProductDetail(selectorDetail, selectorProduct) {
     const param = new URL(window.location.href)
     const id = param.searchParams.get('id')
-    await axios(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`)
+    axios(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`)
       .then((result) => {
+        /* Render Detail Product */
         document.querySelector(selectorDetail).innerHTML =
           this.renderDetailProduct(result.data.content)
         document.querySelector(selectorProduct).innerHTML =
           this.renderProductList(result.data.content.relatedProducts)
+
+        /* Assign Events Button After Render */
+        this.btnActive()
+        this.btnHandleEvent()
       })
       .catch((err) => {
         console.log(err)
       })
-    this.btnActive()
-    this.btnAddToCart()
   }
 
   /* Render Product */
-  renderProductList(arrProduct) {
+  renderProductList(arrProduct, link = '') {
     let htmlString = ''
     arrProduct.forEach((element) => {
       htmlString += `
       <div class="card">
-        <a href="detail.html?id=${element.id}">
+        <a href="${link}detail.html?id=${element.id}">
           <div class="card-img">
             <img src=${element.image} alt="" />
           </div>
@@ -53,6 +59,8 @@ export default class Product {
     })
     return htmlString
   }
+
+  /* Render Detail Product */
   renderDetailProduct(product) {
     let htmlString = `          
     <div class="detail__product-img">
@@ -89,7 +97,7 @@ export default class Product {
     return htmlString
   }
 
-  /* Button Size Active */
+  /* Button Size Active Event */
   btnActive() {
     const btnSize = document.querySelectorAll('.detail__size button')
     btnSize.forEach((button) => {
@@ -104,8 +112,8 @@ export default class Product {
     })
   }
 
-  /* Button Add To Cart */
-  async btnAddToCart() {
+  /* Button Handle Event */
+  btnHandleEvent() {
     const btnAddToCart = document.querySelector('.btn-detail')
     const btnQuantity = document.querySelectorAll(
       '.detail__button-quantity button'
@@ -113,20 +121,37 @@ export default class Product {
     const totalQuantity = document.querySelector('.total-quantity')
     const totalPrice = document.querySelector('.total-price')
     const priceProduct = Number(totalPrice.innerHTML)
+
+    /* Button Reduce Quantity Event */
     btnQuantity[0].onclick = () => {
       if (totalQuantity.innerHTML > 1) {
         totalQuantity.innerHTML = totalQuantity.innerHTML - 1
         totalPrice.innerHTML = totalPrice.innerHTML - priceProduct
       }
     }
+
+    /* Button Increase Quantity Event */
     btnQuantity[1].onclick = () => {
       totalQuantity.innerHTML = Number(totalQuantity.innerHTML) + 1
       totalPrice.innerHTML = Number(totalPrice.innerHTML) + priceProduct
     }
+
+    /* Button Add To Cart Event */
     btnAddToCart.onclick = async () => {
       const param = new URL(window.location.href)
       const idProduct = Number(param.searchParams.get('id'))
-      let cartList = JSON.parse(localStorage.getItem('cartList')) || []
+      const cartList = JSON.parse(localStorage.getItem('cartList')) || []
+
+      /* If Cart List Have Product, Change Quantity And Total Price */
+      if (cartList.find((element) => element.id == idProduct)) {
+        const index = cartList.findIndex((element) => element.id === idProduct)
+        cartList[index].totalQuantity += Number(totalQuantity.innerHTML)
+        cartList[index].totalPrice += Number(totalPrice.innerHTML)
+        localStorage.setItem('cartList', JSON.stringify(cartList))
+        return
+      }
+
+      /* If Cart List Does Not Have Product, Push Product To Cart List */
       const product = await axios
         .get(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${idProduct}`)
         .then((result) => result.data.content)
@@ -140,13 +165,7 @@ export default class Product {
         totalPrice: Number(totalPrice.innerHTML),
         categories: product.categories[0].category,
       }
-      const index = cartList.findIndex((element) => element.id === cartItem.id)
-      if (index !== -1) {
-        cartList[index].totalQuantity += Number(totalQuantity.innerHTML)
-        cartList[index].totalPrice += Number(totalPrice.innerHTML)
-      } else {
-        cartList.push(cartItem)
-      }
+      cartList.push(cartItem)
       localStorage.setItem('cartList', JSON.stringify(cartList))
     }
   }

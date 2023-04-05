@@ -1,4 +1,4 @@
-/* Register */
+/* Account */
 .form {
   margin: 80px 0;
   color: $c-secondary;
@@ -230,6 +230,36 @@
             }
           }
         }
+      }
+    }
+  }
+  .overlay-message {
+    @include title-h3;
+    font-size: $fs-6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32, 34, 33, 0.7);
+    .container-message {
+      display: flex;
+      flex-direction: column;
+      width: 550px;
+      height: 150px;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+      background-color: $bg-primary-darken;
+      border-radius: 10px;
+      h3 {
+        text-align: center;
+      }
+      button {
+        font-weight: $fw-bold;
       }
     }
   }

@@ -1,15 +1,20 @@
 export default class Cart {
+  /* Get Data Cart List */
   cartList = JSON.parse(localStorage.getItem('cartList'))
-  /* Render Cart Item */
+
+  /* Render Cart */
   renderCartItem(cartList, selector) {
+    /* If Cart List Empty Render Message */
     if (cartList == 0) {
       document.querySelector(
         selector
       ).innerHTML = `<p class="empty-cart">Empty Cart</p>`
-    } else {
-      let htmlString = ''
-      cartList.forEach((cartItem) => {
-        htmlString += `
+      return
+    }
+    /* If Cart List Have Product Render Cart Item */
+    let htmlString = ''
+    cartList.forEach((cartItem) => {
+      htmlString += `
         <div class="cart__item">
           <div class="cart__item-content-left">
             <div class="cart__item-product-pic">
@@ -38,12 +43,13 @@ export default class Cart {
           </div>
         </div>
       `
-      })
-      document.querySelector(selector).innerHTML = htmlString
-      this.reduceQuantityCartItem()
-      this.increaseQuantityCartItem()
-      this.deleteCartItem()
-    }
+    })
+    document.querySelector(selector).innerHTML = htmlString
+
+    /* Assign Events Button After Render */
+    this.reduceQuantityCartItem()
+    this.increaseQuantityCartItem()
+    this.deleteCartItem()
   }
 
   /* Render Total Cart Price */
