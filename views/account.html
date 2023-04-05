@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CapStone-JS</title>
+    <title>CapStone-JS-BinhHa</title>
 
     <!-- Font Awesome -->
     <link
@@ -43,56 +43,105 @@
           <div class="nav-bar">
             <a href="../index.html">NEW</a>
             <a href="./cart.html">CART</a>
-            <a href="./account.html">ACCOUNT</a>
+            <a href="#" class="active">ACCOUNT</a>
           </div>
         </div>
       </div>
     </header>
-    <section class="detail">
+    <section class="form">
       <div class="container">
-        <div class="detail__product">
-          <div class="detail__product-img">
-            <img src="../assets/img/product/CONTINENTAL_80.png" alt="" />
+        <div class="form-container">
+          <div class="form__content">
+            <form class="form-panel form__sign-up">
+              <h3 class="item">Sign Up</h3>
+              <div class="form-group item">
+                <input type="text" id="email" required />
+                <label for="email">Email</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <input type="password" id="password" required />
+                <label for="password">Password</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <input type="password" id="password-confirm" required />
+                <label for="password-confirm">Password Confirm</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <input type="text" id="name" required />
+                <label for="name">Name</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <input type="number" id="phone" required />
+                <label for="phone">Phone</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <label class="radio-container"
+                  >Male
+                  <input
+                    type="radio"
+                    checked="checked"
+                    name="gender"
+                    value="true"
+                  />
+                  <span class="check-radio"></span>
+                </label>
+                <label class="radio-container"
+                  >Female
+                  <input type="radio" name="gender" value="false" />
+                  <span class="check-radio"></span>
+                </label>
+              </div>
+              <div class="form__signup-submit item">
+                <button class="btn-sign-up" id="btn-sign-up" type="submit">
+                  Create Account
+                </button>
+              </div>
+            </form>
+            <form class="form-panel form__sign-in">
+              <h3 class="item">Sign In</h3>
+              <div class="form-group item">
+                <input type="text" id="email-signIn" required />
+                <label for="email-signIn">Email</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group item">
+                <input type="password" id="password-signIn" required />
+                <label for="password-signIn">Password</label>
+                <span class="form-message"></span>
+              </div>
+              <div class="form__signup-submit item">
+                <button class="btn-sign-in" id="btn-sign-in" type="submit">
+                  Sign In
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="detail__product-description">
-            <div class="detail__title">
-              <h3>Continental 80</h3>
-              <p>
-                Experience epic energy in every stride with the Ultraboost
-                Light. Our lightest Ultraboost ever, made with 30% lighter BOOST
-                material. 'Cause heavy legs suck.
-              </p>
-              <p>$ 350.00</p>
-            </div>
-            <div class="detail__size">
-              <button class="button-size active-btn">38</button>
-              <button class="button-size">39</button>
-              <button class="button-size">40</button>
-              <button class="button-size">41</button>
-              <button class="button-size">42</button>
-            </div>
-            <div class="detail__button-quantity">
-              <button class="btn-increase">
-                <i class="fa fa-arrow-left"></i>
-              </button>
-              <span>1</span>
-              <button class="btn-reduce">
-                <i class="fa fa-arrow-right"></i>
-              </button>
-            </div>
-            <div class="detail__button">
-              <button class="btn-detail">Add To Cart</button>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h3>Welcome Back, Friend</h3>
+                <p>To keep connected with us for the latest product updates</p>
+                <button class="btn-overlay" id="signIn">Sign Up</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h3>Hello, Friend!</h3>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="btn-overlay" id="signUp">Sign In</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="product">
-      <div class="container">
-        <div class="title">
-          <h2>relate product</h2>
+      <div class="overlay-message" style="display: none">
+        <div class="container-message">
+          <h3>Congratulations on your successful account registration</h3>
+          <button class="btn-primary">OK</button>
         </div>
-        <div class="content"></div>
       </div>
     </section>
     <footer class="footer">
@@ -152,7 +201,7 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
-    <!-- Detail Js -->
-    <script type="module" src="../controllers/detail.js"></script>
+    <!-- Account Js -->
+    <script type="module" src="../controllers/account.js"></script>
   </body>
 </html>

@@ -42,57 +42,60 @@
           </div>
           <div class="nav-bar">
             <a href="../index.html">NEW</a>
-            <a href="./cart.html">CART</a>
+            <a href="#" class="active">CART</a>
             <a href="./account.html">ACCOUNT</a>
           </div>
         </div>
       </div>
     </header>
-    <section class="detail">
+    <section class="cart">
       <div class="container">
-        <div class="detail__product">
-          <div class="detail__product-img">
-            <img src="../assets/img/product/CONTINENTAL_80.png" alt="" />
+        <div class="cart__title">
+          <h3>your cart</h3>
+          <p>You are eligible for free standard shipping in the US.</p>
+        </div>
+        <div class="cart__content">
+          <div class="cart__list">
+            <div class="cart__list-text">
+              <div class="product-text"><p>Product</p></div>
+              <div class="quantity-text">
+                <p>Quantity</p>
+                <p>Total</p>
+              </div>
+            </div>
+            <div class="cart__list-item">
+              <p class="empty-cart">Empty Cart</p>
+            </div>
           </div>
-          <div class="detail__product-description">
-            <div class="detail__title">
-              <h3>Continental 80</h3>
-              <p>
-                Experience epic energy in every stride with the Ultraboost
-                Light. Our lightest Ultraboost ever, made with 30% lighter BOOST
-                material. 'Cause heavy legs suck.
-              </p>
-              <p>$ 350.00</p>
+          <div class="cart__payment">
+            <div class="cart__payment-total">
+              <div class="cart__payment-text">
+                <p>Total</p>
+                <p>$ <span class="total-cart">0.00</span></p>
+              </div>
+              <div class="cart__payment-description">
+                <p>
+                  Shipping & taxes calculated at checkout. Orders outside of the
+                  US may be subject to import fees / duties
+                </p>
+              </div>
+              <div class="cart__payment-button">
+                <button class="btn-primary">checkout</button>
+              </div>
             </div>
-            <div class="detail__size">
-              <button class="button-size active-btn">38</button>
-              <button class="button-size">39</button>
-              <button class="button-size">40</button>
-              <button class="button-size">41</button>
-              <button class="button-size">42</button>
-            </div>
-            <div class="detail__button-quantity">
-              <button class="btn-increase">
-                <i class="fa fa-arrow-left"></i>
-              </button>
-              <span>1</span>
-              <button class="btn-reduce">
-                <i class="fa fa-arrow-right"></i>
-              </button>
-            </div>
-            <div class="detail__button">
-              <button class="btn-detail">Add To Cart</button>
+            <div class="cart__payment-accepted">
+              <div class="cart__payment-title">
+                <h4>We Accept</h4>
+              </div>
+              <div class="cart__payment-logo">
+                <img src="../assets/img/payout/MasterCard.png" alt="" />
+                <img src="../assets/img/payout/VisaCard.png" alt="" />
+                <img src="../assets/img/payout/Paypal.png" alt="" />
+                <img src="../assets/img/payout/MoMo_Logo.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="product">
-      <div class="container">
-        <div class="title">
-          <h2>relate product</h2>
-        </div>
-        <div class="content"></div>
       </div>
     </section>
     <footer class="footer">
@@ -152,7 +155,7 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
-    <!-- Detail Js -->
-    <script type="module" src="../controllers/detail.js"></script>
+    <!-- Cart Js -->
+    <script type="module" src="../controllers/cart.js"></script>
   </body>
 </html>

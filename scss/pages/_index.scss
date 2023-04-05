@@ -1,0 +1,142 @@
+/* Carousel */
+.carousel {
+  margin-top: 50px;
+  .container {
+    .carousel__list {
+      position: relative;
+      height: 350px;
+      .carousel__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        .content-left {
+          width: 40%;
+          .carousel__slogan {
+            @include title;
+            margin-bottom: 30px;
+            opacity: 0;
+          }
+          .carousel__description {
+            color: $c-secondary;
+            font-weight: $fw-normal;
+            margin-bottom: 10px;
+            opacity: 0;
+          }
+          .carousel__star {
+            color: $c-primary;
+            margin-bottom: 30px;
+            opacity: 0;
+            @for $i from 1 through 5 {
+              i:nth-child(#{$i}) {
+                animation: dominos 3s 0.125s * $i infinite ease;
+              }
+            }
+            i {
+              margin-right: 5px;
+              font-size: $fs-6;
+            }
+          }
+          .btn-primary {
+            opacity: 0;
+            display: none;
+          }
+        }
+        .content-right {
+          width: 60%;
+          position: relative;
+          img {
+            width: 90%;
+            opacity: 0;
+            transition: all 1s;
+            &:hover {
+              transform: rotate(0deg) translate(100px, -30px);
+              + p {
+                color: $c-primary;
+                letter-spacing: 0px;
+                font-weight: $fw-semibold;
+              }
+            }
+          }
+          p {
+            position: absolute;
+            top: 350px;
+            left: 130px;
+            color: $c-secondary;
+            font-weight: $fw-normal;
+            font-size: $fs-4;
+            letter-spacing: 15px;
+            opacity: 0;
+            transition: all 1s;
+          }
+        }
+      }
+      .carousel__item:nth-child(1) img {
+        transform: rotate(-30deg) translate(100px, -30px) scale(0.5);
+      }
+      .carousel__item:nth-child(2) img {
+        opacity: 1;
+        transform: rotate(10deg) translate(100px, -30px) scale(1);
+      }
+      .carousel__item:nth-child(2) {
+        z-index: 10;
+        .content-left {
+          .carousel__slogan {
+            animation: fadeInLeft 1s forwards;
+          }
+          .carousel__description {
+            animation: fadeInLeft 1s forwards;
+            animation-delay: 0.5s;
+          }
+          .carousel__star {
+            animation: fadeInLeft 1s forwards;
+            animation-delay: 1s;
+          }
+          .btn-primary {
+            opacity: 1;
+            display: inline-block;
+          }
+        }
+        .content-right {
+          p {
+            opacity: 1;
+          }
+        }
+      }
+      .carousel__nav {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        position: absolute;
+        z-index: 20;
+        bottom: -30px;
+        .btn-prev {
+          @include btn-nav;
+        }
+        .btn-next {
+          @include btn-nav;
+        }
+      }
+    }
+  }
+}
+
+/* Product */
+.product {
+  margin: 130px 0px 80px;
+  .container {
+    .title {
+      text-align: center;
+      letter-spacing: 1.5px;
+      padding: 20px 0;
+      margin-bottom: 20px;
+      @include title-s;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  }
+}

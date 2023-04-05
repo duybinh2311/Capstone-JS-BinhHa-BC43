@@ -1,0 +1,40 @@
+/* Header */
+.header {
+  .container {
+    .header__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      .nav-bar {
+        a {
+          margin-left: 80px;
+          color: $c-secondary;
+          font-weight: $fw-normal;
+          position: relative;
+          transition: all 0.5s;
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            background-color: $c-primary;
+            right: 0;
+            bottom: -5px;
+            transition: all 0.5s;
+          }
+          &:hover {
+            color: $c-primary;
+            &::after {
+              transform: scaleX(1);
+            }
+          }
+        }
+        .active {
+          color: $c-primary;
+        }
+      }
+    }
+  }
+}

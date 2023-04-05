@@ -1,0 +1,32 @@
+/* Button Light */
+.btn-primary {
+  @include clipPath-button;
+  padding: 10px 30px;
+  background-color: $c-primary;
+  color: $bg-primary;
+  border: solid $c-primary 2px;
+  font-weight: $fw-normal;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: $c-primary;
+    background-color: $bg-secondary;
+    border: 2px solid $bg-secondary;
+  }
+}
+
+/* Button Dark */
+.btn-primary-dark {
+  @include clipPath-button;
+  padding: 10px 30px;
+  background-color: $bg-primary;
+  color: $c-secondary;
+  border: none;
+  font-weight: $fw-normal;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: $bg-primary;
+    background-color: $c-primary;
+  }
+}

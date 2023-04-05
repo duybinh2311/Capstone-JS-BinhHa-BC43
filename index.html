@@ -19,7 +19,7 @@
     />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -41,48 +41,125 @@
             </svg>
           </div>
           <div class="nav-bar">
-            <a href="../index.html">NEW</a>
-            <a href="./cart.html">CART</a>
-            <a href="./account.html">ACCOUNT</a>
+            <a href="#" class="active">NEW</a>
+            <a href="./views/cart.html">CART</a>
+            <a href="./views/account.html">ACCOUNT</a>
           </div>
         </div>
       </div>
     </header>
-    <section class="detail">
+    <section class="carousel">
       <div class="container">
-        <div class="detail__product">
-          <div class="detail__product-img">
-            <img src="../assets/img/product/CONTINENTAL_80.png" alt="" />
+        <div class="carousel__list">
+          <div class="carousel__content">
+            <div class="carousel__item">
+              <div class="content-left">
+                <h1 class="carousel__slogan">
+                  EPIC ENERGY. <br />
+                  LIGHTEST EVER.
+                </h1>
+                <p class="carousel__description">
+                  Experience epic energy in every stride with the Ultraboost
+                  Light. Our lightest Ultraboost ever, made with 30% lighter
+                  BOOST material. 'Cause heavy legs suck.
+                </p>
+                <p class="carousel__star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </p>
+                <button class="btn-primary">Buy Now</button>
+              </div>
+              <div class="content-right">
+                <img src="./assets/img/product/CONTINENTAL_80.png" alt="" />
+                <p id="p">CONTINENTAL 80</p>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <div class="content-left">
+                <h1 class="carousel__slogan">
+                  STEP INTO. <br />
+                  WHAT FEELS GOOD.
+                </h1>
+                <p class="carousel__description">
+                  Experience epic energy in every stride with the Ultraboost
+                  Light. Our lightest Ultraboost ever, made with 30% lighter
+                  BOOST material. 'Cause heavy legs suck.
+                </p>
+                <p class="carousel__star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </p>
+                <button class="btn-primary">Buy Now</button>
+              </div>
+              <div class="content-right">
+                <img src="./assets/img/product/NUCOMBE.png" alt="" />
+                <p id="p">NUCOMBE</p>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <div class="content-left">
+                <h1 class="carousel__slogan">
+                  ARE YOU READY. <br />
+                  LEAD THE WAY.
+                </h1>
+                <p class="carousel__description">
+                  Experience epic energy in every stride with the Ultraboost
+                  Light. Our lightest Ultraboost ever, made with 30% lighter
+                  BOOST material. 'Cause heavy legs suck.
+                </p>
+                <p class="carousel__star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </p>
+                <button class="btn-primary">Buy Now</button>
+              </div>
+              <div class="content-right">
+                <img src="./assets/img/product/ORKETRO_2.png" alt="" />
+                <p id="p">ORKETRO 2</p>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <div class="content-left">
+                <h1 class="carousel__slogan">
+                  MAKE YOUR MOVE. <br />
+                  NOT AFRAID.
+                </h1>
+                <p class="carousel__description">
+                  Experience epic energy in every stride with the Ultraboost
+                  Light. Our lightest Ultraboost ever, made with 30% lighter
+                  BOOST material. 'Cause heavy legs suck.
+                </p>
+                <p class="carousel__star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </p>
+                <button class="btn-primary">Buy Now</button>
+              </div>
+              <div class="content-right">
+                <img src="./assets/img/product/SUPERSTAR_Dark.png" alt="" />
+                <p id="p">SUPERSTAR DARK</p>
+              </div>
+            </div>
           </div>
-          <div class="detail__product-description">
-            <div class="detail__title">
-              <h3>Continental 80</h3>
-              <p>
-                Experience epic energy in every stride with the Ultraboost
-                Light. Our lightest Ultraboost ever, made with 30% lighter BOOST
-                material. 'Cause heavy legs suck.
-              </p>
-              <p>$ 350.00</p>
-            </div>
-            <div class="detail__size">
-              <button class="button-size active-btn">38</button>
-              <button class="button-size">39</button>
-              <button class="button-size">40</button>
-              <button class="button-size">41</button>
-              <button class="button-size">42</button>
-            </div>
-            <div class="detail__button-quantity">
-              <button class="btn-increase">
-                <i class="fa fa-arrow-left"></i>
-              </button>
-              <span>1</span>
-              <button class="btn-reduce">
-                <i class="fa fa-arrow-right"></i>
-              </button>
-            </div>
-            <div class="detail__button">
-              <button class="btn-detail">Add To Cart</button>
-            </div>
+          <div class="carousel__nav">
+            <button class="btn-prev">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <button class="btn-next">
+              <i class="fa fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -90,7 +167,7 @@
     <section class="product">
       <div class="container">
         <div class="title">
-          <h2>relate product</h2>
+          <h2>Explore Your Shoes</h2>
         </div>
         <div class="content"></div>
       </div>
@@ -152,7 +229,7 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
-    <!-- Detail Js -->
-    <script type="module" src="../controllers/detail.js"></script>
+    <!-- Index Js -->
+    <script type="module" src="./controllers/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,44 @@
+/* Card */
+.card {
+  @include clipPath-card;
+  text-align: center;
+  background-color: $c-secondary;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: all 0.7s;
+  &:hover {
+    box-shadow: 0px 0px 10px 2px $c-primary;
+    img {
+      transform: rotateZ(10deg) scale(1.05);
+    }
+  }
+  .card-img {
+    img {
+      width: 70%;
+      transition: all 0.7s;
+    }
+  }
+  .card-name {
+    color: $bg-secondary;
+    font-weight: $fw-normal;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  .card-description {
+    font-size: $fs-6;
+    font-weight: $fw-light;
+    margin: 10px 0;
+    color: $bg-primary;
+  }
+  .card-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+    p {
+      font-size: $fs-5;
+      font-weight: $fw-semibold;
+      color: $bg-secondary;
+    }
+  }
+}

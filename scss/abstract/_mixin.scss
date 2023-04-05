@@ -1,4 +1,87 @@
-// Hà 
+/* Text */
+@mixin title {
+  color: $c-primary;
+  font-size: $fs-3;
+  text-transform: uppercase;
+}
 
+@mixin title-s {
+  color: $c-primary;
+  font-size: $fs-6;
+  text-transform: uppercase;
+}
 
-// Bình
+@mixin title-h3 {
+  font-size: $fs-3;
+  color: $c-primary;
+  font-weight: $fw-normal;
+  text-transform: capitalize;
+}
+
+/* Button */
+@mixin btn-nav {
+  background-color: $c-primary;
+  width: 30px;
+  height: 30px;
+  border: solid 1px $c-primary;
+  color: $bg-primary;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $bg-primary;
+    color: $c-primary;
+  }
+}
+
+@mixin btn-primary-polygon {
+  background-color: $c-primary;
+  border: none;
+  font-weight: $fw-semibold;
+  font-size: $fs-7;
+  padding: 12px 45px;
+  text-transform: capitalize;
+  cursor: pointer;
+  @include clipPath-4corner();
+  &:hover {
+    background-color: $bg-secondary;
+    color: $c-secondary;
+  }
+}
+
+/* Clip Path Border */
+@mixin clipPath-card {
+  border-radius: 10px 0px;
+  clip-path: polygon(0 0, 93% 0, 100% 7%, 100% 100%, 7% 100%, 0 93%);
+}
+
+@mixin clipPath-cart {
+  border-radius: 0px 5px;
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+@mixin clipPath-button {
+  border-radius: 0px 3px;
+  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+}
+
+@mixin clipPath-4corner {
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+/* Responsive */
+
+@mixin responsive($device) {
+  @if (map-has-key($map: $breakpoints, $key: $device)) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $device,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+  else {
+    @warn "{$device} is't in breakpoint";
+  }
+}
