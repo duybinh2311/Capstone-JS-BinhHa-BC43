@@ -606,6 +606,11 @@ input::-webkit-inner-spin-button {
   position: relative;
   color: #ffffff;
 }
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) span {
+  font-size: 12px;
+  padding: 5px 0;
+  color: #f70000;
+}
 .form .container .form-container .form__content .form-group:not(:nth-child(7)) label {
   position: absolute;
   top: 0;
@@ -627,11 +632,20 @@ input::-webkit-inner-spin-button {
   color: #ffffff;
   border-bottom: 1px solid #ffc014;
 }
-.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):focus ~ label, .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):valid ~ label {
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):not(:-moz-placeholder-shown) ~ label {
   top: -20px;
   left: 0;
   color: #ffc014;
   font-size: 12px;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):focus ~ label, .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):not(:placeholder-shown) ~ label {
+  top: -20px;
+  left: 0;
+  color: #ffc014;
+  font-size: 12px;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]).invalid {
+  border-color: #f70000;
 }
 .form .container .form-container .form__content .form-group:nth-child(7) {
   display: flex;
@@ -896,7 +910,7 @@ input::-webkit-inner-spin-button {
 .form .container .form-container.right-panel-active .overlay-container .overlay .overlay-right {
   transform: translateX(20%);
 }
-.form .overlay-message {
+.form .message-container {
   font-size: 26px;
   color: #ffc014;
   font-weight: 400;
@@ -911,8 +925,11 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   background-color: rgba(32, 34, 33, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
-.form .overlay-message .container-message {
+.form .message-container .popup-message {
   display: flex;
   flex-direction: column;
   width: 550px;
@@ -922,12 +939,21 @@ input::-webkit-inner-spin-button {
   align-items: center;
   background-color: #111111;
   border-radius: 10px;
+  scale: 0;
+  transition: all 0.3s ease-in-out;
 }
-.form .overlay-message .container-message h3 {
+.form .message-container .popup-message h3 {
   text-align: center;
 }
-.form .overlay-message .container-message button {
+.form .message-container .popup-message button {
   font-weight: 700;
+}
+.form .message-container .popup-message.active {
+  scale: 1;
+}
+.form .message-container.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Cart */

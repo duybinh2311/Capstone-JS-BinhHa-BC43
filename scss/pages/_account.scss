@@ -20,6 +20,11 @@
           margin-bottom: 40px;
           position: relative;
           color: $c-secondary;
+          span {
+            font-size: $fs-7;
+            padding: 5px 0;
+            color: $c-error-message;
+          }
           label {
             position: absolute;
             top: 0;
@@ -41,11 +46,14 @@
             color: $c-secondary;
             border-bottom: 1px solid $c-primary;
             &:focus ~ label,
-            &:valid ~ label {
+            &:not(:placeholder-shown) ~ label {
               top: -20px;
               left: 0;
               color: $c-primary;
               font-size: $fs-7;
+            }
+            &.invalid {
+              border-color: $c-error-message;
             }
           }
         }
@@ -233,7 +241,7 @@
       }
     }
   }
-  .overlay-message {
+  .message-container {
     @include title-h3;
     font-size: $fs-6;
     position: fixed;
@@ -245,7 +253,10 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(32, 34, 33, 0.7);
-    .container-message {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    .popup-message {
       display: flex;
       flex-direction: column;
       width: 550px;
@@ -255,12 +266,21 @@
       align-items: center;
       background-color: $bg-primary-darken;
       border-radius: 10px;
+      scale: 0;
+      transition: all 0.3s ease-in-out;
       h3 {
         text-align: center;
       }
       button {
         font-weight: $fw-bold;
       }
+      &.active {
+        scale: 1;
+      }
+    }
+    &.active {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
