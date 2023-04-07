@@ -16,3 +16,8 @@ document.querySelector('.btn-prev').onclick = carouselPrev
 import Product from '../models/Product.js'
 const product = new Product()
 product.getProductList('.product .content')
+
+/* Check Login, Logout */
+import { checkLogin, logOut } from '../utils/method.js'
+checkLogin()
+logOut()

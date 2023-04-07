@@ -69,6 +69,7 @@ import Validation from '../models/Validation.js'
     for (const input of inputField) {
       input.value = ''
     }
+    document.querySelector('#log-out').style.display = 'inline'
   }
   btnSignIn.onclick = () => {
     /* Assign Value Input To User Login */
@@ -84,3 +85,8 @@ import Validation from '../models/Validation.js'
     user.postUSerLogin(showPopup, clearForm)
   }
 }
+
+/* Check Login, Logout */
+import { checkLogin, logOut } from '../utils/method.js'
+checkLogin()
+logOut()

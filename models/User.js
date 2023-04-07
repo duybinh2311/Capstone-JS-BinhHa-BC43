@@ -27,4 +27,5 @@ export default class User {
         showPopup(err.response.data.message)
       })
   }
+  
 }

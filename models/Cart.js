@@ -5,7 +5,7 @@ export default class Cart {
   /* Render Cart */
   renderCartItem(cartList, selector) {
     /* If Cart List Empty Render Message */
-    if (cartList == 0) {
+    if (!cartList.length) {
       document.querySelector(
         selector
       ).innerHTML = `<p class="empty-cart">Empty Cart</p>`
@@ -54,6 +54,8 @@ export default class Cart {
 
   /* Render Total Cart Price */
   renderTotalCart(cartList, selector) {
+    debugger
+    if (!cartList.length) return
     const totalCart = cartList.reduce(
       (output, element) => (output += element.totalPrice),
       0
