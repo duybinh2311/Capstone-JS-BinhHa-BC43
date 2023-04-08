@@ -62,12 +62,8 @@ export default class Validation {
             isValid = false
           }
         }
-        if (isValid) {
-          if (typeof this.callAPI === 'function') {
-            this.callAPI()
-            return
-          }
-          formElement.submit()
+        if (isValid && typeof this.callAPI === 'function') {
+          this.callAPI()
         }
       }
     }
@@ -76,57 +72,60 @@ export default class Validation {
   /* Function Valid */
   validFunctions = {
     required: (value) => {
-      return value.trim() ? '' : `Vui lòng không bỏ trống`
+      return value.trim() ? '' : `Please enter something`
     },
     number: (value) => {
       const regexNumber = /^[0-9]+$/
-      return regexNumber.test(value) ? '' : `Vui lòng nhập vào số`
+      return regexNumber.test(value) ? '' : `Input value must be number`
     },
     letter: (value) => {
       const regexLetter = /^[A-Z a-z]+$/
       return regexLetter.test(this.validFunctions.removeAscent(value))
         ? ''
-        : `Vui lòng nhập vào kí tự`
-    },
-    removeAscent: (str) => {
-      if (str === null || str === undefined) return str
-      str = str.toLowerCase()
-      str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a')
-      str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e')
-      str = str.replace(/ì|í|ị|ỉ|ĩ/g, 'i')
-      str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, 'o')
-      str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, 'u')
-      str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, 'y')
-      str = str.replace(/đ/g, 'd')
-      return str
+        : `Input value must be letter`
     },
     email: (value) => {
       const regexEmail =
         /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-      return regexEmail.test(value) ? '' : `Email không hợp lệ`
+      return regexEmail.test(value) ? '' : `Invalid Email`
     },
     password: (value) => {
       const regexPassword =
         /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/
       return regexPassword.test(value)
         ? ''
-        : `Mật khẩu cần ít nhất một kí tự hoa, số và kí tự đặc biệt`
+        : `Password needs at least one uppercase, number and special character`
     },
     min: (min) => {
       return (value) => {
-        return value.length >= min ? '' : `Tối thiểu ${min} kí tự`
+        return value.length >= min ? '' : `Min ${min} characters`
       }
     },
     max: (max) => {
       return (value) => {
-        return value.length <= max ? '' : `Tối đa ${max} kí tự`
+        return value.length <= max ? '' : `Max ${max} characters`
       }
     },
     confirm: (selectorConfirm) => {
       return (value) => {
-        const valueConfirm = document.querySelector(selectorConfirm).value
-        return value === valueConfirm ? '' : `Nhập lại không chính xác`
+        const confirmElement = document.querySelector(selectorConfirm)
+        const valueConfirm = confirmElement.value
+        return value === valueConfirm
+          ? ''
+          : `Confirmation ${confirmElement.id} is not correcct`
       }
+    },
+    removeAscent: (string) => {
+      if (string === null || string === undefined) return string
+      string = string.toLowerCase()
+      string = string.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a')
+      string = string.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e')
+      string = string.replace(/ì|í|ị|ỉ|ĩ/g, 'i')
+      string = string.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, 'o')
+      string = string.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, 'u')
+      string = string.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, 'y')
+      string = string.replace(/đ/g, 'd')
+      return string
     },
   }
 }
