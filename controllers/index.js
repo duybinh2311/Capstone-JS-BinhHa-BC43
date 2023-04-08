@@ -21,3 +21,4 @@ product.getProductList('.product .content')
 import { checkLogin, logOut } from '../utils/method.js'
 checkLogin()
 logOut()
+

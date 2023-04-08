@@ -7,6 +7,7 @@ export default class Product {
         /* Render Product */
         document.querySelector(selectorProduct).innerHTML =
           this.renderProductList(result.data.content, './views/')
+        this.hoverCard()
       })
       .catch((err) => {
         console.log(err)
@@ -28,6 +29,7 @@ export default class Product {
         /* Assign Events Button After Render */
         this.btnActive()
         this.btnHandleEvent()
+        this.hoverCard()
       })
       .catch((err) => {
         console.log(err)
@@ -168,5 +170,26 @@ export default class Product {
       cartList.push(cartItem)
       localStorage.setItem('cartList', JSON.stringify(cartList))
     }
+  }
+  hoverCard() {
+    const cartList = document.querySelectorAll('.card')
+    cartList.forEach((card) => {
+      card.addEventListener('mouseover', () => {
+        cartList.forEach((cardNotHover) => {
+          cardNotHover.style.scale = 0.95
+          cardNotHover.style.opacity = 0.7
+        })
+        card.style.scale = 1
+        card.style.opacity = 1
+      })
+    })
+    cartList.forEach((card) => {
+      card.addEventListener('mouseleave', () => {
+        cartList.forEach((card) => {
+          card.style.scale = 1
+          card.style.opacity = 1
+        })
+      })
+    })
   }
 }
